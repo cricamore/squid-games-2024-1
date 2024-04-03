@@ -18,7 +18,7 @@ public class RedManCircle : MonoBehaviour
     {
         Vector3 position = RedManCircleTransform.position;
 
-        position.x += Mathf.Cos(Time.time) * Time.deltaTime * speed * 2;
+        position.x -= Mathf.Cos(Time.time) * Time.deltaTime * speed * 2;
         position.z += Mathf.Sin(Time.time) * Time.deltaTime * speed * 2;
 
         RedManCircleTransform.position = position;

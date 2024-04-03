@@ -20,17 +20,17 @@ public class RedManTriangle : MonoBehaviour
   
         if (position.x >= -2.0f && position.x < 2.0f && position.y == 0.0f)
         {
-            position.x += Time.deltaTime * speed;
+            position.x += Time.deltaTime * (speed + 0.9f);
         }
         else if (position.x > 0.0f && position.y >= 0.0f)
         {
-            position.x -= Time.deltaTime * speed;
-            position.y += Time.deltaTime * speed;
+            position.x -= Time.deltaTime * (speed + 0.9f);
+            position.y += Time.deltaTime * (speed + 0.9f);
         }
         else if (position.x > -2.0f && position.y >= 0.0f)
         {
-            position.x -= Time.deltaTime * speed;
-            position.y -= Time.deltaTime * speed;
+            position.x -= Time.deltaTime * (speed + 0.9f);
+            position.y -= Time.deltaTime * (speed + 0.9f);
         }
         else
         {
