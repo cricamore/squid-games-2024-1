@@ -6,7 +6,7 @@ public class RedManTriangle : MonoBehaviour
 {
     public Transform RedManTriangleTransform;
     private float speed = 2.0f;
-
+    public Light pointLight;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,5 +39,10 @@ public class RedManTriangle : MonoBehaviour
         }
 
         RedManTriangleTransform.position = position;
+
+        // Posiciona la luz por encima del objeto RedManTriangle
+        Vector3 lightPosition = RedManTriangleTransform.position;
+        lightPosition.y += 2.0f; // Ajusta esta posición según tu necesidad
+        pointLight.transform.position = lightPosition;
     }
 }
